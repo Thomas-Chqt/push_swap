@@ -6,13 +6,20 @@
 /*   By: tchoquet <tchoquet@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 17:58:17 by tchoquet          #+#    #+#             */
-/*   Updated: 2023/07/03 18:00:19 by tchoquet         ###   ########.fr       */
+/*   Updated: 2023/07/03 19:57:16 by tchoquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void test(void)
+void	init_list(int argc, char const *argv[], t_list **lst_a)
 {
-	printf("\n\n%d\n\n\n", ft_isascii('A'));
+	t_uint32	i;
+
+	i = argc - 1;
+	while (i > 0)
+	{
+		printf("%s\n", argv[i]);
+		i--;
+	}
 }

@@ -6,7 +6,7 @@
 #    By: tchoquet <tchoquet@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/03 17:49:32 by tchoquet          #+#    #+#              #
-#    Updated: 2023/07/03 19:03:28 by tchoquet         ###   ########.fr        #
+#    Updated: 2023/07/04 17:10:13 by tchoquet         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,7 +68,7 @@ fcleandebug: cleandebug
 redebug: fcleandebug alldebug
 
 norm:
-	norminette ${SRCS_DIR} ${INCLUDES_DIR}
+	@norminette ${SRCS_DIR} ${INCLUDES_DIR}
 
 
 #folders

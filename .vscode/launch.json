@@ -5,15 +5,15 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "Debug push_swap",
+			"name": "Debug",
 			"type": "cppdbg",
 			"request": "launch",
 			"program": "${workspaceFolder}/Debug.out",
 			"stopAtEntry": false,
-			"cwd": "${fileDirname}",
+			"cwd": "${workspaceFolder}",
 			"externalConsole": false,
 			"MIMode": "lldb",
-			"preLaunchTask": "Build push_swap Debug"
+			"preLaunchTask": "Build Debug"
 		}
 	]
 }

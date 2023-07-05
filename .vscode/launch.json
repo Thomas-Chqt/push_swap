@@ -9,6 +9,7 @@
 			"type": "cppdbg",
 			"request": "launch",
 			"program": "${workspaceFolder}/Debug.out",
+			"args": ["12", "122435234523452345"],
 			"stopAtEntry": false,
 			"cwd": "${workspaceFolder}",
 			"externalConsole": false,

@@ -3,6 +3,7 @@
 		"includes"
 	],
 	"files.exclude": {
+		"*.sh": true,
 		"push_swap": true
 	}
 }

@@ -3,3 +3,6 @@ push_swap
 *.o
 *.a
 .DS_Store
+*tester*
+*checker*
+*.sh

@@ -8,63 +8,56 @@
 			"type": "shell",
 			"group": "build",
 			"command": "make",
-			"args": [
-				"debug"
-			],
+			"args": ["debug"],
 			"options": {
 				"cwd": "${workspaceFolder}"
 			},
 			"problemMatcher": "$gcc",
 			"presentation": {
 				"reveal": "silent",
-				"close": true
 			}
 		},
 		{
 			"label": "Build Release",
 			"type": "shell",
-			"group": {
-				"kind": "build",
-			},
+			"group": "build",
 			"command": "make",
-			"args": [
-				"all"
-			],
+			"args": ["all"],
 			"options": {
 				"cwd": "${workspaceFolder}"
 			},
 			"problemMatcher": "$gcc",
 			"presentation": {
 				"reveal": "silent",
-				"close": true
 			}
 		},
 		{
 			"label": "Clean",
 			"type": "shell",
-			"command": "make clean cleandebug && rm -rf build"
+			"command": "make clean cleandebug && rm -rf build",
+			"presentation": {
+				"close": true
+			}
 		},
 		{
 			"label": "FClean",
 			"type": "shell",
-			"command": "make fclean fcleandebug && rm -rf build product"
+			"command": "make fclean fcleandebug && rm -rf build",
+			"presentation": {
+				"close": true
+			}
 		},
 		{
 			"label": "Norminette",
 			"type": "shell",
 			"command": "make",
-			"args": [
-				"norm"
-			],
+			"args": ["norm"],
 			"options": {
 				"cwd": "${workspaceFolder}"
 			},
 			"problemMatcher": {
 				"owner": "Norminette",
-				"fileLocation": [
-					"autoDetect",
-					"${workspaceFolder}"
-				],
+				"fileLocation": ["autoDetect","${workspaceFolder}"],
 				"pattern": [
 					{
 						"regexp": "^(.*):\\s+(.*)$",
@@ -83,7 +76,6 @@
 			},
 			"presentation": {
 				"reveal": "silent",
-				"close": true
 			}
 		}
 	]

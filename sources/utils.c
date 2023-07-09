@@ -1,48 +1,55 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   wrappers.c                                         :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tchoquet <tchoquet@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 16:46:26 by tchoquet          #+#    #+#             */
-/*   Updated: 2023/07/07 03:00:48 by tchoquet         ###   ########.fr       */
+/*   Updated: 2023/07/09 17:16:57 by tchoquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_bool	is_not_nbr_wrap(void *str, void *none)
+t_bool	is_notnbr(void *str_ptr, void *none)
 {
 	if (none)
 		none = NULL;
-	return (!is_number((const char *)str));
+	return (!is_number(*((const char **)str_ptr)));
 }
 
-t_bool	is_overflow_wrap(void *str, void *none)
+t_bool	is_overflow(void *str_ptr, void *none)
 {
 	long	nbr;
 
 	if (none)
 		none = NULL;
-	nbr = atoi_long((const char *)str);
+	nbr = atoi_long(*((const char **)str_ptr));
 	if (nbr > INT_MAX || nbr < INT_MIN)
 		return (true);
 	return (false);
 }
 
-int	lst_clear_wrap(t_list **lst, void (*del)(void *), int ret_val)
+t_bool	is_empty(void *str_ptr, void *none)
 {
-	ft_lstclear(lst, del);
-	return (ret_val);
+	char	*trimed;
+	t_bool	ret;
+
+	if (none)
+		none = NULL;
+	trimed = ft_strtrim(*((const char **)str_ptr), " \t");
+	ret = trimed[0] == '\0';
+	free(trimed);
+	return (ret);
 }
 
-t_bool	is_bigger_wrap(void *el, void *com)
+t_bool	is_bigger(int nbr, void *pivot)
 {
-	return (*((int *)el) > *((int *)com));
+	return (nbr >= *((int *)pivot));
 }
 
-t_bool	is_smaller_wrap(void *el, void *com)
+t_bool	is_smaller(int nbr, void *pivot)
 {
-	return (*((int *)el) < *((int *)com));
+	return (nbr <= *((int *)pivot));
 }

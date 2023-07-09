@@ -6,7 +6,7 @@
 /*   By: tchoquet <tchoquet@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 17:05:02 by tchoquet          #+#    #+#             */
-/*   Updated: 2023/07/07 03:21:41 by tchoquet         ###   ########.fr       */
+/*   Updated: 2023/07/09 12:10:20 by tchoquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,15 +35,15 @@ static void	exec_swap(t_instruction inst, t_list **lst_a, t_list **lst_b)
 
 	if (inst == sa || inst == ss)
 	{
-		node_1 = lst_remove_first(lst_a);
-		node_2 = lst_remove_first(lst_a);
+		node_1 = lst_rmvfrst(lst_a);
+		node_2 = lst_rmvfrst(lst_a);
 		ft_lstadd_front(lst_a, node_1);
 		ft_lstadd_front(lst_a, node_2);
 	}
 	if (inst == sb || inst == ss)
 	{
-		node_1 = lst_remove_first(lst_b);
-		node_2 = lst_remove_first(lst_b);
+		node_1 = lst_rmvfrst(lst_b);
+		node_2 = lst_rmvfrst(lst_b);
 		ft_lstadd_front(lst_b, node_1);
 		ft_lstadd_front(lst_b, node_2);
 	}
@@ -52,17 +52,17 @@ static void	exec_swap(t_instruction inst, t_list **lst_a, t_list **lst_b)
 static void	exec_pr(t_instruction inst, t_list **lst_a, t_list **lst_b)
 {
 	if (inst == pa)
-		ft_lstadd_front(lst_a, lst_remove_first(lst_b));
+		ft_lstadd_front(lst_a, lst_rmvfrst(lst_b));
 	if (inst == pb)
-		ft_lstadd_front(lst_b, lst_remove_first(lst_a));
+		ft_lstadd_front(lst_b, lst_rmvfrst(lst_a));
 	if (inst == ra || inst == rr)
-		ft_lstadd_back(lst_a, lst_remove_first(lst_a));
+		ft_lstadd_back(lst_a, lst_rmvfrst(lst_a));
 	if (inst == rb || inst == rr)
-		ft_lstadd_back(lst_b, lst_remove_first(lst_b));
+		ft_lstadd_back(lst_b, lst_rmvfrst(lst_b));
 	if (inst == rra || inst == rrr)
-		ft_lstadd_front(lst_a, lst_remove_last(lst_a));
+		ft_lstadd_front(lst_a, lst_rmvlast(lst_a));
 	if (inst == rrb || inst == rrr)
-		ft_lstadd_front(lst_b, lst_remove_last(lst_b));
+		ft_lstadd_front(lst_b, lst_rmvlast(lst_b));
 }
 
 // static void	print_inst_buffer(t_instruction inst)

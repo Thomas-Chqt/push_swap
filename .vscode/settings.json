@@ -4,6 +4,8 @@
 	],
 	"files.exclude": {
 		"*.sh": true,
+		"*checker*": true,
+		"*tester*": true,
 		"push_swap": true
 	}
 }

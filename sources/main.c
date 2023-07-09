@@ -6,7 +6,7 @@
 /*   By: tchoquet <tchoquet@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 18:00:26 by tchoquet          #+#    #+#             */
-/*   Updated: 2023/07/07 19:08:41 by tchoquet         ###   ########.fr       */
+/*   Updated: 2023/07/09 18:53:42 by tchoquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,16 @@ static void	destructor(void)
 
 int	main(int argc, char const *argv[])
 {
-	int		ret_val;
 	t_list	*list_a;
 	t_list	*list_b;
 
 	list_a = NULL;
 	list_b = NULL;
-	ret_val = init_list(argc, argv, &list_a);
-	if (ret_val != 0)
-		exit_error(ret_val);
+	if (init_list(argc, (char **)argv, &list_a) != 0)
+	{
+		ft_putstr_fd("Error\n", STDERR_FILENO);
+		return (-1);
+	}
 	sort_list_a(&list_a, ft_lstsize(list_a), &list_b);
 	exec_inst(none, &list_a, &list_b, NULL);
 	ft_lstclear(&list_a, &free_wrap);

@@ -7,6 +7,7 @@
 		"Makefile": false,
 		"Libft/libft*.a": true,
 		"Libft/libft.h": true,
-		"push_swap": true
+		"push_swap": true,
+		"checker": true
 	}
 }

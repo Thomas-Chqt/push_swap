@@ -6,7 +6,7 @@
 #    By: tchoquet <tchoquet@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/03 17:49:32 by tchoquet          #+#    #+#              #
-#    Updated: 2023/07/10 17:03:21 by tchoquet         ###   ########.fr        #
+#    Updated: 2023/07/10 17:59:56 by tchoquet         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,7 +66,7 @@ fcleandebug: cleandebug
 	@rm -rf ${NAME_DEBUG}
 	@echo "${NAME_DEBUG} deleted."
 
-redebug: fcleandebug alldebug
+redebug: fcleandebug debug
 
 
 

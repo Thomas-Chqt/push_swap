@@ -6,7 +6,7 @@
 /*   By: tchoquet <tchoquet@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 16:46:26 by tchoquet          #+#    #+#             */
-/*   Updated: 2023/07/10 12:50:16 by tchoquet         ###   ########.fr       */
+/*   Updated: 2023/07/10 18:06:06 by tchoquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ t_bool	is_empty(void *str_ptr, void *none)
 	if (none)
 		none = NULL;
 	trimed = ft_strtrim(*((const char **)str_ptr), " \t");
+	if (trimed == NULL)
+		return ((*((const char **)str_ptr))[0] == '\0');
 	ret = trimed[0] == '\0';
 	free(trimed);
 	return (ret);

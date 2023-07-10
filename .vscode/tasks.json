@@ -42,7 +42,6 @@
 			"args": [
 				"clean",
 				"cleandebug",
-				"cleandebugexe",
 				"cleanbuild"
 			],
 			"presentation": {
@@ -56,12 +55,12 @@
 			"args": [
 				"fclean",
 				"fcleandebug",
-				"fcleandebugexe",
 				"cleanbuild"
 			],
 			"presentation": {
 				"close": true
 			},
+			"problemMatcher": []
 		},
 		{
 			"label": "Norminette",

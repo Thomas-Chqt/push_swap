@@ -4,12 +4,9 @@
 		"Libft/includes"
 	],
 	"files.exclude": {
-		"**/.DS_Store": false,
-		"**/.git": false,
-		"**/.hg": false,
-		"**/.svn": false,
-		"**/CVS": false,
-		"**/Thumbs.db": false,
-		"Makefile": false
+		"Makefile": false,
+		"Libft/libft*.a": true,
+		"Libft/libft.h": true,
+		"push_swap": true
 	}
 }

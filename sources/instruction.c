@@ -6,7 +6,7 @@
 /*   By: tchoquet <tchoquet@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 17:05:02 by tchoquet          #+#    #+#             */
-/*   Updated: 2023/07/09 12:10:20 by tchoquet         ###   ########.fr       */
+/*   Updated: 2023/07/10 12:49:55 by tchoquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ static void	exec_pr(t_instruction inst, t_list **lst_a, t_list **lst_b);
 // static void	print_inst_buffer(t_instruction inst);
 static void	print_inst(t_instruction inst);
 
-void	exec_inst(t_instruction inst, t_list **lst_a, t_list **lst_b, t_uint32 *counter)
+void	exec_inst(t_instruction inst, t_list **lst_a, t_list **lst_b,
+			t_uint32 *counter)
 {
 	if (inst == sa || inst == sb || inst == ss)
 		exec_swap(inst, lst_a, lst_b);

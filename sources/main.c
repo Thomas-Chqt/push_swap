@@ -6,15 +6,15 @@
 /*   By: tchoquet <tchoquet@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 18:00:26 by tchoquet          #+#    #+#             */
-/*   Updated: 2023/07/09 18:53:42 by tchoquet         ###   ########.fr       */
+/*   Updated: 2023/07/10 12:50:11 by tchoquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-# ifdef MEMCHECK
+#ifdef MEMCHECK
 
-#  include <memory_leak_detector.h>
+# include <memory_leak_detector.h>
 
 __attribute__((destructor))
 static void	destructor(void)
@@ -30,7 +30,7 @@ static void	destructor(void)
 	free(cmd);
 }
 
-# endif // MEMCHECK
+#endif // MEMCHECK
 
 int	main(int argc, char const *argv[])
 {

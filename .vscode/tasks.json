@@ -8,9 +8,7 @@
 			"type": "shell",
 			"group": "build",
 			"command": "make",
-			"args": [
-				"debug"
-			],
+			"args": ["debug"],
 			"options": {
 				"cwd": "${workspaceFolder}"
 			},
@@ -24,9 +22,7 @@
 			"type": "shell",
 			"group": "build",
 			"command": "make",
-			"args": [
-				"all"
-			],
+			"args": ["all"],
 			"options": {
 				"cwd": "${workspaceFolder}"
 			},
@@ -55,18 +51,13 @@
 			"label": "Norminette",
 			"type": "shell",
 			"command": "make",
-			"args": [
-				"norm"
-			],
+			"args": ["norm"],
 			"options": {
 				"cwd": "${workspaceFolder}"
 			},
 			"problemMatcher": {
 				"owner": "Norminette",
-				"fileLocation": [
-					"autoDetect",
-					"${workspaceFolder}"
-				],
+				"fileLocation": ["autoDetect","${workspaceFolder}"],
 				"pattern": [
 					{
 						"regexp": "^(.*):\\s+(.*)$",

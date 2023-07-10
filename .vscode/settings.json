@@ -1,11 +1,15 @@
 {
 	"C_Cpp.default.includePath": [
-		"includes"
+		"includes",
+		"Libft/includes"
 	],
 	"files.exclude": {
-		"*.sh": true,
-		"*checker*": true,
-		"*tester*": true,
-		"push_swap": true
+		"**/.DS_Store": false,
+		"**/.git": false,
+		"**/.hg": false,
+		"**/.svn": false,
+		"**/CVS": false,
+		"**/Thumbs.db": false,
+		"Makefile": false
 	}
 }

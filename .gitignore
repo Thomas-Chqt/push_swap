@@ -6,3 +6,5 @@ push_swap
 *tester*
 *checker*
 *.sh
+Libft/*.a
+Libft/*.h
